@@ -32,7 +32,8 @@ public class Employee implements Serializable {
 
     private Integer status;
 
-    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss"),这个是使时间转换格式
+//    但是这个需要在每一个时间字段上加上这个注解，于是我们使用扩展springmvc消息转换器
     private LocalDateTime createTime;
 
     //@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
